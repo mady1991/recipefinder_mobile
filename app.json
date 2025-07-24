@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Recipe_Finder_Mobile",
-    "slug": "Recipe_Finder_Mobile",
+    "name": "Recipe Finder",
+    "slug": "recipe_finder",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,14 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.scorpionfun.recipefinder",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.scorpionfun.recipefinder"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +42,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8c6927a2-012f-4acc-a7ff-a0d093fdf5bd"
+      }
+    },
+    "owner": "narender_pratap_singh"
   }
 }

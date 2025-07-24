@@ -48,3 +48,24 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Create a build 
+- npm install -g eas-cli
+- eas login
+- eas build -p android --profile preview
+
+<!-- {
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk" || "app-bundle"
+      }
+    }
+  }
+} -->
+
+## Build APK (for testing or direct install)
+- eas build -p android --profile preview
+
+## Build App Bundle (AAB) – For Play Store
+-eas build -p android --profile production
