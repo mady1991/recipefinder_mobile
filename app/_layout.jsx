@@ -1,8 +1,7 @@
-import { Slot } from "expo-router";
+import SafeScreen from '@/components/SafeScreen';
 import { ClerkProvider } from "@clerk/clerk-expo";
 import { tokenCache } from "@clerk/clerk-expo/token-cache";
-import SafeScreen from '@/components/SafeScreen';
-import SplashScreen from '../app/splash/SplashScreen';
+import { Slot } from "expo-router";
 import { useEffect, useState } from "react";
 
 export default function RootLayout() {
@@ -20,7 +19,8 @@ export default function RootLayout() {
   //if (splashLoading) return <SplashScreen />;
   return (
     <ClerkProvider
-      tokenCache={tokenCache}>
+      tokenCache={tokenCache}
+      publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <SafeScreen>
         <Slot />
       </SafeScreen>
